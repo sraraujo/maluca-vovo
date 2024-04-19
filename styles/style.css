@@ -53,7 +53,7 @@ span#dataFabricacao{
 
     position: absolute;
     top: 211px;
-    left: 48px;
+    left: 46px;
 }
 
 span#produtoGrama{
@@ -82,5 +82,7 @@ span#produtoGrama{
 @media print{
     span#produtoGrama{
         color: white;
+
+        z-index: 1;
     }    
 }
