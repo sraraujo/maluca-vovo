@@ -1,16 +1,19 @@
-const resultado = document.getElementById("resultado")
 const dataInput = document.getElementById("data")
 const produto = document.getElementById("produto")
+const validade = document.getElementById("validade")
+const resultado = document.getElementById("resultado")
 const etiquetas = document.getElementById("etiquetasPdf")
 
 let dados = document.getElementById("dados")
 var data;
+var prazoValidade;
 
 
 
 function gerarEtiqueta(){  
 
     verificarData()
+    verificarValdiade()
 
     resultado.innerHTML = ""
 
@@ -21,9 +24,10 @@ function gerarEtiqueta(){
 
                 <span id="produtoGrama"> ${produto.value} </span>
                 <span id="dataFabricacao"> ${data} </span>
+                <span id="prazoValidade"> ${prazoValidade} </span>
                 
                 <picture>
-                    <img src="imagens/etiqueta-pq.png" class="border border-secondary imgEtiqueta">
+                    <img src="imagens/etiqueta-sl.png" class="border border-secondary imgEtiqueta">
                 </picture>
             </div>
         `
@@ -36,6 +40,7 @@ function gerarEtiqueta(){
 function gerarPdf(){
 
     verificarData()
+    verificarValdiade()
 
     etiquetas.innerHTML = ""
 
@@ -46,9 +51,10 @@ function gerarPdf(){
                 <div id="quadro">
                     <span id="produtoGrama"> ${produto.value} </span>
                     <span id="dataFabricacao"> ${data} </span>
+                    <span id="prazoValidade"> ${prazoValidade} </span>
                     
                     <picture>
-                        <img src="imagens/etiqueta-pq.png">
+                        <img src="imagens/etiqueta.png">
                     </picture>
                 </div>
             `
@@ -84,6 +90,15 @@ function verificarData(){
     }else{
         const da = new Date(dataInput.value)
         data = da.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+    }
+}
+
+
+function verificarValdiade(){
+    if (validade.value == "" || validade.value == null){
+        prazoValidade = '15 dias'
+    }else{
+        prazoValidade = `${validade.value} dias`
     }
 }
 

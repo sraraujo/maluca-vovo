@@ -45,6 +45,17 @@ img#imgEtiqueta{
     height: 275px;
 }
 
+span#produtoGrama{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+
+    position: absolute;
+    top: 162px;
+    left: 112px;
+}
+
 span#dataFabricacao{
     color: red;
     font-family: Arial, Helvetica, sans-serif;
@@ -56,15 +67,15 @@ span#dataFabricacao{
     left: 46px;
 }
 
-span#produtoGrama{
-    color: white;
+span#prazoValidade{
+    color: red;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-weight: bold;
 
     position: absolute;
-    top: 162px;
-    left: 112px;
+    top: 224px;
+    left: 48px;
 }
 
 #etiquetasPdf{ 
