@@ -9,7 +9,6 @@ var data;
 var prazoValidade;
 
 
-
 function gerarEtiqueta(){  
 
     verificarData()
@@ -27,7 +26,7 @@ function gerarEtiqueta(){
                 <span id="prazoValidade"> ${prazoValidade} </span>
                 
                 <picture>
-                    <img src="imagens/etiqueta-sl.png" class="border border-secondary imgEtiqueta">
+                    <img src="imagens/etiqueta.png" class="border border-secondary imgEtiqueta">
                 </picture>
             </div>
         `
@@ -49,7 +48,7 @@ function gerarPdf(){
         for (var x = 1; x <= 20; x++){
             etiquetas.innerHTML += `
                 <div id="quadro">
-                    <span id="produtoGrama"> ${produto.value} </span>
+                    <span class="text-white" id="produtoGrama"> ${produto.value} </span>
                     <span id="dataFabricacao"> ${data} </span>
                     <span id="prazoValidade"> ${prazoValidade} </span>
                     

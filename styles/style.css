@@ -40,12 +40,12 @@ img#imgEtiqueta{
     margin: 2px auto;
 }
 
-#quadro > picture > img{
+div#quadro > picture > img{
     width: 153px;
     height: 275px;
 }
 
-span#produtoGrama{
+div#quadro > span#produtoGrama{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
@@ -86,14 +86,4 @@ span#prazoValidade{
 
     display: flex;
     flex-wrap: wrap;
-
-}
-
-
-@media print{
-    span#produtoGrama{
-        color: white;
-
-        z-index: 1;
-    }    
 }
