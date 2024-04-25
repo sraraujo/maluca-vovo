@@ -95,7 +95,7 @@ function verificarData(){
 
 function verificarValdiade(){
     if (validade.value == "" || validade.value == null){
-        prazoValidade = '15 dias'
+        prazoValidade = '20 dias'
     }else{
         prazoValidade = `${validade.value} dias`
     }
